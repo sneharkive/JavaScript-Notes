@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <script src="1_Variables.js"></script>
+    <style>
+        body{
+            background-color: rgba(228, 225, 168, 0.584);
+            font-family: cursive;
+            line-height: 40px;
+            padding: 10px 30px;
+        }
+        .bold{
+            color: rgb(31, 34, 226);
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variables in JavaScript</h1>
+    <h2>Variables are containers for storing values.</h2>
+    <p>And we can give that name in three ways.</p>
+    <ul>
+        <li>Using <code class="bold">let</code> keyword</li>
+        <li>Using <code class="bold">const</code> keyword</li>
+        <li>Using <code class="bold">var</code> keyword</li>
+    </ul>
+
+
+    <h2>NOTE</h2>
+    <ul>
+        <li>Always use <span class="bold">const</span> if the value should not be changed.</li>
+        <li>Always use <span class="bold">const</span> if the type should not be changes (Arrays, Functions, Objects and RegExp).</li>
+        <li>Only use <span class="bold">let</span> if you can't use <span class="bold">const</span>.</li>
+        <li>You cannot re-declare a variable declare with <span class="bold">let</span> or <span class="bold">const</span>.</li>
+        <li>Variables declare with <span class="bold">let</span> and <span class="bold">const</span> have Block Scope.</li>
+        <li>Variables declare with <span class="bold">let</span> and <span class="bold">const</span> cannot be re-declared in the same Scope.</li>
+        <li>Variables declare with <span class="bold">var</span> always have Global Scope.</li>
+        <li><span class="bold">let</span> & <span class="bold">const</span> does not bind to <span class="bold">this</span>.</li>
+        <li><span class="bold">let</span> & <span class="bold">const</span> are not hoisted.</li>
+        <li><span class="bold">const</span> Variables must be assigned a value when they declared.</li>
+    </ul>
+
+    <h2>Constant Objects and Arrays</h2>
+    <p>The keyword <span class="bold">const</span> is little misleading</p>
+    <p>It does not define a constant value. It defines a constant reference to a value.</p>
+    <p>Because of this you can NOT:</p>
+    <ul>
+        <li>Reassign a constant <b>value</b></li>
+        <li>Reassign a constant <b>array</b></li>
+        <li>Reassign a constant <b>object</b></li>
+    </ul>
+    <p>But you CAN: </p>
+    <ul>
+        <li>Change the elements of constant array</li>
+        <li>Change the properties of constant object</li>
+    </ul>
+
+</body>
+</html>
