@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <script src="3_DataType.js"></script>
+    <style>
+        body{
+            background-color: rgba(228, 225, 168, 0.584);
+            font-family: cursive;
+            line-height: 40px;
+            padding: 10px 30px;
+        }
+        pre{
+            background-color: black;
+            color: aliceblue;
+            padding-inline: 10px;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <h1>Data Types in JavaScript</h1>
+    <h2>There are two types of data types JavaScript</h2>
+    <ol>
+        <li><p>Primitive</p></li>
+        <li><p>Non Primitive</p></li>
+    </ol>
+    <h2>In this video we'll learn about primitive data types.</h2>
+    <h3>We can classify primitive data types in 7 categories.</h3>
+    <ol>
+        <li>number</li>
+        <li>string</li>
+        <li>boolean</li>
+        <li>undefined</li>
+        <li>null (typeof null  => object) </li>
+        <li>bigint  (<= for very large number)</li>
+        <li>symbol</li>
+    </ol>
+
+    <h2>There is only one type of Non Primitive data type that is called object.</h2>
+
+    <h3>Objects are further divided into three categories.</h3>
+
+    <ul>
+        <li>Object Literals</li>
+        <li>Arrays</li>
+        <li>Functions</li>
+    </ul>
+
+    <h2>Observation</h2>
+    <ul>
+<li>
+    JavaScript evaluates expression from left to right. Different sequences can produce different results.
+    <pre>
+console.log('sneha' + 16 + 4); //sneha164  <= JS first get string so rest are also treated as string
+console.log(16 + 4 + 'sneha'); //20sneha  <= JS first get number so treat 16 & 4 as number until it get string
+</pre>
+</li>
+
+<li>JavaScript has dynamic types. This means that the same variable can be used to hold different data types.
+<pre>
+let x = 5;
+x = 'Sneha'
+</pre>
+</li>
+    
+</ul>
+</body>
+</html>
