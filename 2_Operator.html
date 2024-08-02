@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+    <script src="script.js" defer></script>
+    <style>
+      body{
+          background-color: rgba(228, 225, 168, 0.584);
+          font-family: cursive;
+          line-height: 40px;
+      }
+      .bold, .example{
+        display: inline-block;
+        text-align: center;
+        border: 2px solid blueviolet;
+        margin-block: 10px;
+      }
+      .bold{width: 50%;}
+      .example{width: 40%;}
+  </style>
+  </head>
+  <body style="font-family: cursive">
+    <h1>Operators</h1>
+
+    <ul>
+      <li><span class="bold">Arithmetic Operators</span>  =>  <span class="example"> + &nbsp; - &nbsp; * &nbsp; ** &nbsp; / &nbsp; % &nbsp; ++ &nbsp; --</span></li>
+      <li><span class="bold">Assignment Operators</span>  =>  <span class="example"> = &nbsp; += &nbsp; -= &nbsp; *= &nbsp; /= &nbsp; %= &nbsp; **=</span></li>
+      <li><span class="bold">Comparison Operators</span>  =>  <span class="example">== &nbsp; === &nbsp; != &nbsp; !== &nbsp; > &nbsp; < &nbsp; >= &nbsp; <= &nbsp; ?</span></li>
+      <li><span class="bold">String Operators</span>  =>  <span class="example"></span></li>
+      <li><span class="bold">Logical Operators</span>  =>  <span class="example">&& &nbsp; || &nbsp; ! &nbsp; </span></li>
+      <li><span class="bold">Bitwise Operators</span>  =>  <span class="example">& &nbsp; | &nbsp; ~ &nbsp; ^ &nbsp; << &nbsp; >> &nbsp; >>> </span></li>
+      <li><span class="bold">Ternary Operators</span>  =>  <span class="example"></span></li>
+      <li><span class="bold">Type Operators</span>  =>  <span class="example">typeof &nbsp; instanceof</span></li>
+    </ul>
+
+    <h2>Comparison Operators</h2>
+    <ul>
+    <li><span class="example"> == </span> => <span class="bold"> equal to (equality) [it does implicit (automatic) conversion]</span></li>
+    <li><span class="example"> === </span> => <span class="bold"> equal value and equal type (strict equality) [you have to do explicit (manual) conversion]</span></li>
+    <li><span class="example"> != </span> => <span class="bold"> not equal</span></li>
+    <li><span class="example"> !== </span> => <span class="bold"> not equal value or not equal type (strict)</span></li>
+    <li><span class="example"> > </span> => <span class="bold">greater than</span></li>
+    <li><span class="example"> < </span> => <span class="bold">less than</span></li>
+    <li><span class="example"> >= </span> => <span class="bold"> greater than or equal to</span></li>
+    <li><span class="example"> <= </span> => <span class="bold"> less than or equal to</span></li>
+    <li><span class="example"> ? </span> => <span class="bold">ternary operator</span></li>
+  </ul>
+
+
+    <h2>Bitwise Operators</h2>
+    <p>Bit Operators work on 32 bits numbers.</p>
+    <p>Any numeric operand in the operation is converted into a 32 bit number. The result is converted back to a JavaScript number.</p>
+    <ul>
+    <li><span class="example"> & </span> => <span class="bold">AND</span></li>
+    <li><span class="example"> | </span> => <span class="bold">OR</span></li>
+    <li><span class="example"> ~ </span> => <span class="bold">NOT</span></li>
+    <li><span class="example"> ^ </span> => <span class="bold">XOR</span></li>
+    <li><span class="example"> << </span> => <span class="bold">left shift</span></li>
+    <li><span class="example"> >> </span> => <span class="bold">right shift</span></li>
+    <li><span class="example"> >>> </span> => <span class="bold">unsigned right shift</span></li>
+    </ul>
+
+
+    <h2>type Operators</h2>
+    <ul>
+    <li><span class="example"> typeof </span> => <span class="bold"> returns the type of a variable</span></li>
+    <li><span class="example"> instanceof </span> => <span class="bold"> returns true if an object is an instance of an object type</span></li>
+    </ul>
+  </body>
+</html>
