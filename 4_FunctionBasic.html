@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script src="4_FunctionBasic.js" defer></script>
+    <style>
+        body{
+          background-color: rgba(228, 225, 168, 0.584);
+          font-family: cursive;
+          line-height: 30px;
+          margin: 10px 15px;
+        }
+        pre{
+            background-color: rgb(6, 1, 23);
+            color: white;
+            padding-inline: 10px;
+            width: fit-content;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Function Basic</h1>
+    <p>The typeof operator in JavaScript returns "function" for functions.
+        But, JavaScript functions can best be described as objects.
+        JavaScript functions have both <b>properties</b> and <b>methods</b>.</p>
+
+        
+    <h2>Function Invocation</h2>
+    <p>The code inside the function will execute when "something" invokes (calls) the function: </p>
+
+    <ul>
+        <li>When an event occurs (when a user clicks a button)</li>
+        <li>When it is invoked (called) from JavaScript code</li>
+        <li>Automatically (self invoked)</li>
+    </ul>
+
+    <h2>Function Declarations</h2>
+    <p>Since, Hoisting applies to variable declarations and to function declarations.
+    so, JavaScript functions can be called before they are declared:</p>
+    <p>But Functions defined using an expression are not hoisted.
+        Also Arrow functions are not hoisted. They must be defined before they are used.
+    </p>
+<pre>
+function sum (a, b){ 
+    return a + b
+}</pre>
+
+    <h2>Function Expressions</h2>
+    <p>It is also an anonymous function since the function has no name.
+        But since, Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
+    </p>
+    <p>But Functions defined using an expression are not hoisted.</p>
+
+<pre>
+const s = function (a, b){ 
+    return a + b
+}
+let z = s(4, 3) //function call  //here Functions Used as Values
+</pre>
+
+    <h2>Self-Invoking Functions</h2>
+    <p>A self-invoking expression is invoked (started) automatically, without being called.
+        Function expressions will execute automatically if the expression is followed by ().
+    You cannot self-invoke a function declaration.
+    </p>
+    <h3>Benefits of Using the Self-Invoking Functions</h3>
+    <ul>
+    <li>
+        <b>Avoiding the global scope - </b> Developers can avoid the global scope for variables and functions using the self-invoking function, helping to avoid naming conflict and making code more readable.
+    </li>
+    <li><b>Initialization − </b> The self-executing functions can be used for the initialization of variables.</li>
+    <li><b>Code privacy − </b>Programmers can avoid accessing the code of the self-executing function by other parts of the code.</li>
+</ul>
+
+<pre>
+(function (a) {
+    let selfInvoking = 5
+    console.log(`Self-Invoking Functions is ${a}`)
+    console.log(selfInvoking);
+})('here');
+console.log(selfInvoking); //will give error
+</pre>
+
+
+    <h2>Arrow Functions</h2>
+    <h3>Limitation</h3>
+    <ul>
+    <li>The arrow function can't have an arguments object.</li>
+    <li>The arrow function can't have a prototype property as it is stored in the variable as an expression.</li>
+    <li>The arrow function can't be used with the <b>new</b> keyword to create its object.</li>
+    <li>Arrow functions do not have their own this. They are not well suited for defining object methods.</li>
+    <li>Arrow functions are not hoisted. They must be defined before they are used.</li>
+    <li></li>
+
+</ul>
+<pre>
+const x = (x, y) => x * y;
+const y = (a, b) => {
+    console.log(a*b)
+    return a+b
+}
+</pre>
+
+
+    <h2 style="color:blue">Function Rest Parameter</h2>
+    <p>The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:</p>
+<pre>
+function sum(...args) {
+    let sum = 0;
+    for (let arg of args) sum += arg;
+    return sum;
+}
+let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+</pre>
+
+
+    <h2>The Arguments Object</h2>
+    <p>JavaScript functions have a built-in object called the arguments object.
+        The argument object contains an array of the arguments used when the function was called (invoked).
+        </p>
+<pre>
+x = sumAll(1, 123, 500, 115, 44, 88);
+function sumAll() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++)
+    sum += arguments[i];
+  return sum;
+}
+</pre>
+
+<h2>Passed by Value & Passed by Reference</h2>
+<p>JavaScript arguments are passed by value: The function only gets to know the values, not the argument's locations.
+If a function changes an argument's value, it does not change the parameter's original value.
+Changes to arguments are not visible (reflected) outside the function.</p>
+<p>Objects are Passed by Reference</p>
+<p>Changes to object properties are visible (reflected) outside the function.</p>
+
+</body>
+</html>
